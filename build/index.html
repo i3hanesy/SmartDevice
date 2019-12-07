@@ -1,13 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preload" href="fonts/Robotocondensed.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Robotocondensedbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roboto.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptmono.woff2" as="font" crossorigin="anonymous">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body>
+<!--     <div style="display: none">
+      <include src="build/img/sprite-icon.svg"></include>
+    </div> -->
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <div class="header__logo">
+            <a class="header__logo--image">
+              <picture>
+                <source media="(max-width: 769px)" srcset="img/logo-header-mobile.png, img/logo-header-mobile@2x.png 2x">
+                <source media="(max-width: 1023px)" srcset="img/logo-header.png, img/logo-header2@x.png 2x">
+                <img src="img/logo-header-desctop.png" srcset="img/logo-header-desctop@2x.png 2x" width="202" height="52" alt="Логотип">
+              </picture>
+            </a>
+          </div>
+          <button type="button" class="header__toggle visually-hidden"></button>
+          <div class="header__contacts">
+            <a class="header__contacts--mail" href="info@sd.ru">info@sd.ru</a>
+            <a class="header__contacts--phone" href="tel:+74950005252">+7 (495) 000 52 52</a>
+          </div>
+          <div class="header__button--call">
+            <button class="button" type="button">Заказать звонок</button>
+          </div>
+        </div>
+        <div class="header__preview preview">
+          <div class="preview__description">
+            <p>Печатные платы</p>
+            <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+            <a href="#" class="button" type="button">Получить бесплатную консультацию</a>
+            <a href="#" class="button" type="button">Бесплатная консультация</a>
+          </div>
+          <div class="preview__image">
+            <picture>
+              <source media="(max-width: 769px)" srcset="img/circuit-board-mobile.png, img/circuit-board-mobile@2x.png 2x">
+              <source media="(max-width: 1023px)" srcset="img/circuit-board-tablet.png, img/circuit-board-tablet@2x.png 2x">
+              <img src="img/circuit-board-desctop.png" srcset="img/circuit-board-desctop@2x.png 2x" width="705" height="515" alt="печатная плата">
+            </picture>
+          </div>
+        </div>
+        <button type="button" class="header__button">Скролл вниз</button>
+      </div>
+    </header>
+
+  </body>
 </html>
