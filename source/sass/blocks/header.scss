@@ -1,0 +1,171 @@
+.header {
+  padding-right: 6%;
+  padding-bottom: 126px;
+  padding-left: 13%;
+
+  background-color: #1b2d37;
+  background-image: url("../img/header-background-desctop1x.png");
+  background-size: cover;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    padding-bottom: 206px;
+
+    background-image: url("../img/header-background-tablet1x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    padding-bottom: 114px;
+
+    background-image: url("../img/header-background-mobile1x.png");
+  }
+}
+
+.header__top {
+  padding-top: 33px;
+  padding-right: 8.2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    padding-top: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 17px;
+  }
+}
+
+.header__logo {
+  padding-left: 5px;
+  margin-left: 0;
+  margin-right: auto;
+
+  min-width: 202px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 25px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 17px;
+  }
+}
+
+.header__logo img {
+  width: 202px;
+
+  @media (max-width: $mobile-width) {
+    width: 38px;
+  }
+}
+
+.header__contacts {
+  margin-right: 49px;
+  padding-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 50%;
+
+  @media (max-width: $tablet-width) {
+    font-size: 0;
+    padding-top: 13px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 5px;
+  }
+}
+
+.header__contacts a {
+  margin-left: 17.2%;
+  position: relative;
+  color: $white;
+}
+
+.header__contacts .header__contacts--mail::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 14px;
+
+  top: 2px;
+  left: -40px;
+
+  background-image: url("../img/email-icon.svg");
+  background-repeat: no-repeat;
+
+  @media (max-width: $tablet-width) {
+    width: 26px;
+    height: 19px;
+
+    left: 8px;
+    background-size: contain;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: -27px;
+  }
+}
+
+.header__contacts .header__contacts--phone::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+
+  top: 0;
+  left: -33px;
+
+  background-image: url("../img/phone-icon.svg");
+  background-repeat: no-repeat;
+
+  @media (max-width: $tablet-width) {
+    width: 24px;
+    height: 24px;
+
+    left: 0;
+    background-size: contain;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 11px;
+  }
+}
+
+.header__button--call {
+  padding-top: 3px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__button--call button {
+  width: 180px;
+}
+
+.header__button {
+  margin-left: -39px;
+
+  font-family: "PTmono", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+  transform: rotate(-90deg);
+
+  border: none;
+  background-color: transparent;
+  opacity: 0.5;
+
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
