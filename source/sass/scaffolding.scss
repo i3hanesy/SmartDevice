@@ -36,12 +36,12 @@
 }
 
 body {
-  max-width: 1920px;
+  min-width: 320px;
   margin: 0;
   padding: 0;
 
   font-family: "PTmono", "Arial", sans-serif;
-  color: #111111;
+  color: $gray;
   font-weight: 400;
   font-style: normal;
 
@@ -55,6 +55,12 @@ img {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -74,4 +80,49 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.button {
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 13px;
+  vertical-align: middle;
+  font-family: "RobotoCondesed", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  letter-spacing: 0.05em;
+
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+
+  cursor: pointer;
+  z-index: 1;
+  transition: opsity 0.3s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  // @media (min-width: @tablet-width) {
+  //   padding-left: 47px;
+  //   padding-right: 66px;
+  //   padding-top: 13px;
+  //   padding-bottom: 17px;
+
+  //   font-size: 16px;
+  //   line-height: 30px;
+  // }
 }

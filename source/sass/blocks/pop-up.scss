@@ -1,0 +1,164 @@
+.modal {
+  display: none;
+  position: fixed;
+  margin-left: -237px;
+
+  width: 490px;
+  height: 605px;
+
+
+  top: 136px;
+  left: 50%;
+
+  background-color: #00b2ff;
+
+  z-index: 10;
+}
+
+.modal__form {
+  position: relative;
+  padding-top: 30px;
+  padding-left: 39px;
+  padding-right: 39px;
+}
+
+.modal__form form {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.modal__form button[type="reset"] {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+
+  top: 20px;
+  right: 20px;
+
+  width: 17px;
+  height: 17px;
+
+  background-color: transparent;
+  border: none;
+
+  background-image: url("../img/close-popup.svg");
+}
+
+.modal__form p {
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0;
+
+  font-family: "RobotoCondesed", "Arial", sans-serif;
+  font-size: 28px;
+  line-height: 140.62%;
+  font-weight: 400;
+
+  color: $white;
+}
+
+.modal__form span {
+  display: block;
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
+  padding-right: 10px;
+
+  font-size: 16px;
+  line-height: 22px;
+
+  color: $white;
+}
+
+
+.modal__form textarea::placeholder,
+.modal__form input::placeholder {
+
+  font-family: "PTmono", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 16px;
+  line-height: 22px;
+
+  color: $white;
+}
+
+.modal__form input {
+  margin-bottom: 35px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 10px;
+
+  width: 100%;
+}
+
+.modal__form textarea,
+.modal__form input {
+
+  font-size: 16px;
+  line-height: 22px;
+
+  color: $white;
+
+  background-color: rgba(255, 255, 255, 0.1);
+
+  border: none;
+}
+
+.modal__form textarea {
+  margin-bottom: 28px;
+  padding-top: 10px;
+  padding-left: 24px;
+  padding-right: 10px;
+
+  width: 100%;
+  height: 104px;
+
+  resize: none;
+}
+
+.modal__form button[type="submit"] {
+  margin-bottom: 27px;
+  min-width: 100%;
+}
+
+.modal__form--agreement {
+  position: relative;
+  padding-top: 5px;
+  padding-left: 48px;
+  width: 100%;
+}
+
+.modal__form label {
+  font-size: 14px;
+  line-height: 16px;
+
+  color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    left: 0;
+    top: 9px;
+
+    border: 1px solid #ffffff;
+
+    box-sizing: border-box;
+
+    @media (max-width: $mobile-width) {
+      left: 0;
+    }
+  }
+}

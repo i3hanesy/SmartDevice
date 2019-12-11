@@ -1,0 +1,45 @@
+.social {
+  padding-top: 48px;
+  padding-left: 5px;
+
+  width: 100%;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    padding-top: 11px;
+    padding-right: 10px;
+    width: 25%;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    padding: 0;
+
+    justify-content: center;
+
+    width: 100%;
+  }
+}
+
+.social__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (max-width: $mobile-width) {
+    justify-content: space-between;
+    width: 35%;
+  }
+}
+
+.social__list li {
+  margin-right: 15px;
+
+  @media (max-width: $mobile-width) {
+    margin: 0;
+  }
+}

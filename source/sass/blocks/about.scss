@@ -1,0 +1,188 @@
+.about {
+  position: relative;
+  padding-top: 76px;
+  padding-right: 6%;
+  padding-bottom: 92px;
+  padding-left: 13%;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 636px;
+    height: 717px;
+
+    left: 0;
+    top: -327px;
+
+    background-image: url("../img/triangle-advantages-polygon.png");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 636px;
+    height: 717px;
+
+    left: 26%;
+    top: -469px;
+
+    background-image: url("../img/triangle-advantages-polygon.png");
+    background-repeat: no-repeat;
+
+    transform: rotate(180deg);
+
+    z-index: -1;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    padding-top: 26px;
+    padding-bottom: 69px;
+
+    &::before {
+      background-image: none;
+    }
+
+    &::after {
+      width: 636px;
+      height: 717px;
+
+      left: 20%;
+      top: -410px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 36px;
+    padding-bottom: 65px;
+    padding-left: 5%;
+
+    &::after {
+      background-image: none;
+    }
+  }
+}
+
+.about__wrapper {
+  padding-left: 97px;
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.about__image {
+  padding-top: 5px;
+  margin-right: -10px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 0;
+    margin-right: -33px;
+    margin-left: -8px;
+
+    & img {
+      width: 251px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.about__discreption {
+  width: 68%;
+
+  @media (max-width: $tablet-width) {
+    width: 70%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.about__discreption h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-family: "RobotoCondesed", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+
+  color: $gray;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 26px;
+
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+
+    font-size: 28px;
+  }
+}
+
+.about__discreption p {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 22px;
+
+  & i {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 3px;
+
+    & span {
+      display: none;
+    }
+
+    & i {
+      display: inline;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 40px;
+    padding-right: 23px;
+    padding-left: 0;
+  }
+}
+
+.about__button--wrapper {
+  padding-top: 19px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 21px;
+    padding-left: 4px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: -10px;
+    padding-top: 0;
+    padding-left: 0;
+  }
+}
+
+.about__button--wrapper a {
+  padding-bottom: 11px;
+  min-width: 180px;
+
+  color: #00b2ff;
+  border-color: #00b2ff;
+}
