@@ -144,7 +144,6 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("img/triangle1@2x.png");
-    background-size: 705px auto;
   }
 
   @media (max-width: $tablet-width) {
@@ -199,11 +198,11 @@
       content: "";
       position: absolute;
 
-      width: 200px;
+      width: 169px;
       height: 441px;
 
       top: -59px;
-      right: -31px;
+      right: 0;
 
       background-image: url("../img/trangle-mobile.png");
       background-repeat: no-repeat;
@@ -245,6 +244,11 @@
   @media (max-width: $tablet-width) {
     margin-left: 50px;
     width: 377px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+    width: 288px;
   }
 }
 

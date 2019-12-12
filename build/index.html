@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Document</title>
+    <title>SmartDevice</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -77,7 +77,6 @@
               </div>
             </a>
           </div>
-          <button type="button" class="header__toggle visually-hidden"></button>
           <div class="header__contacts">
             <a class="header__contacts--mail" href="info@sd.ru">info@sd.ru</a>
             <a class="header__contacts--phone" href="tel:+74950005252">+7 (495) 000 52 52</a>
@@ -90,7 +89,7 @@
           <div class="preview__description">
             <h1>Печатные платы</h1>
             <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a href="#" class="button">
+            <a href="#question" class="button">
               <span class="button__desctop">Получить бесплатную консультацию</span>
               <span class="button__mobile">Бесплатная консультация</span>
             </a>
@@ -112,12 +111,12 @@
 
           </div>
         </div>
-        <button type="button" class="header__button">Скролл вниз</button>
+        <a href="#advantages" class="header__button">Скролл вниз</a>
       </div>
     </header>
 
     <main>
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <h2 class="visually-hidden">Преимущиства</h2>
         <div class="advantages__wrapper container">
           <ul class="advantages__list">
@@ -241,7 +240,7 @@
           </ul>
         </div>
       </section>
-      <section class="question">
+      <section class="question" id="question">
         <div class="question__wrapper container">
           <div class="question__image">
             <img src="img/paper_airplane1x.png" width="511" height="288" srcset="img/paper_airplane1x.png 1x, img/paper_airplane2x.png 2x" alt="Бумажный самолет">
@@ -249,17 +248,15 @@
           <div class="question__form">
             <p>Остались вопросы? Задайте их нам!</p>
             <span>Мы проконсультируем Вас бесплатно</span>
-            <form>
+            <form method="post" enctype="multipart/form-data" autocomplete="off">
               <input type="text" name="user-name" placeholder="Имя">
               <input type="tel" name="user-phone" placeholder="Телефон">
               <textarea name="user-question" placeholder="Ваш вопрос" rows="20" cols="20"></textarea>
-              <button class="button" type="submit">Задать вопрос</button>
               <div class="question__form--agreement">
-                <label for="agreement">
                 <input class="visually-hidden" type="checkbox" name="agreement" id="agreement">
-                    Я согласен на обработку персональных данных
-                </label>
+                <label for="agreement">Я согласен на обработку персональных данных</label>
               </div>
+              <button class="button" type="submit">Задать вопрос</button>
             </form>
           </div>
         </div>
@@ -303,7 +300,7 @@
               </ul>
             </div>
           </div>
-          <div class="footer-top__partitions">
+          <div class="footer-top__partitions footer-top__no-js closed--footer-information">
             <h2>Разделы сайта</h2>
             <ul>
               <li><a href="#">О компании</a></li>
@@ -314,9 +311,9 @@
               <li><a href="#">Доставка</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
-            <button type="button" class="closed">Открыть разделы</button>
+            <button type="button">Открыть разделы</button>
           </div>
-          <div class="footer-top__address address">
+          <div class="footer-top__address footer-top__no-js opened--footer-information">
             <h2>Наш офис</h2>
             <ul class="address__list">
               <li><span>г. Мытищи, Олимпийский проспект, д.10</span></li>
@@ -324,7 +321,7 @@
               <li><span>+7 (925) 003-87-67</span></li>
               <li><span>+7 (926) 926-080-79</span></li>
             </ul>
-            <button type="button" class="opened">Открыть контакты</button>
+            <button type="button">Открыть контакты</button>
           </div>
         </section>
       </div>
@@ -345,25 +342,28 @@
         </div>
       </section>
     </footer>
+
+    <div class="modal__overlay modal--hidden">
     <section class="modal">
       <div class="modal__form">
         <p>Закажите звонок</p>
         <span>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
-        <form>
+        <form method="post" enctype="multipart/form-data" autocomplete="off">
           <button type="reset">Закрыть</button>
           <input type="text" name="user-name" placeholder="Имя">
           <input type="tel" name="user-phone" placeholder="Телефон">
           <textarea name="user-question" placeholder="Ваш вопрос" rows="20" cols="20"></textarea>
-          <button class="button" type="submit">Отправить</button>
           <div class="modal__form--agreement">
-            <label for="agreement-modal">
             <input class="visually-hidden" type="checkbox" id="agreement-modal">
-                Я согласен на обработку персональных данных
-            </label>
+            <label for="agreement-modal">Я согласен на обработку персональных данных</label>
           </div>
+          <button class="button" type="submit">Отправить</button>
         </form>
       </div>
 
     </section>
+    </div>
+    <script src="js/zenscroll.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

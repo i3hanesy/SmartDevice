@@ -1,23 +1,15 @@
 footer {
   padding-top: 66px;
-
+  padding-right: 6%;
+  padding-left: 13%;
   background-color: #fafafa;
 
   @media (max-width: $tablet-width) {
     padding-top: 19px;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     padding-top: 45px;
-  }
-}
-
-.footer__wrapper {
-  padding-left: 13%;
-  padding-right: 6%;
-
-  @media (max-width: $tablet-width) {
-    padding: 0;
   }
 }
 
@@ -204,7 +196,7 @@ footer {
 
   @media (max-width: $mobile-width) {
     padding-top: 28px;
-    padding-bottom: 27px;
+    padding-bottom: 25px;
     padding-left: 4%;
 
     width: 100%;
@@ -214,6 +206,7 @@ footer {
     }
 
     & ul {
+      display: none;
       padding-top: 33px;
       padding-left: 3px;
     }
@@ -238,43 +231,63 @@ footer {
   }
 }
 
-.opened {
-  background-image: url("../img/opened-icon.svg");
-  width: 16px;
-  height: 1px;
-  top: 36px;
-}
+//Гармошка в футере
+@media (max-width: $mobile-width) {
+  .closed--footer-information button {
+    background-image: url("../img/closed-icon.svg");
+    width: 16px;
+    height: 16px;
 
-.closed {
-  background-image: url("../img/closed-icon.svg");
-  width: 16px;
-  height: 16px;
+    top: 28px;
+  }
 
-  top: 28px;
+  .closed--footer-information ul {
+    display: none;
+  }
+
+  .opened--footer-information button {
+    background-image: url("../img/opened-icon.svg");
+    width: 16px;
+    height: 1px;
+    top: 36px;
+  }
+
+  .opened--footer-information ul {
+    display: block;
+  }
+
+  //на случай отпадания JS файла
+
+  @media (max-width: $mobile-width) {
+    .footer-top__no-js ul {
+      display: block;
+    }
+
+    .footer-top__no-js button {
+      display: none;
+    }
+  }
 }
 
 .footer-bottom {
-  padding-top: 6px;
+  padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 5px;
 
-  border-top: 8px solid transparent;
-  box-shadow: 0 -10px 1px -10px rgba(27, 45, 55, 0.5);
+  border-top: 1px solid;
+  border-color: rgba(98, 105, 98, 0.2);
 
   @media (max-width: $tablet-width) {
-    padding-top: 13px;
+    padding-top: 20px;
   }
 
   @media (max-width: $mobile-width) {
     padding-bottom: 0;
-    padding-top: 19px;
+    padding-top: 28px;
   }
 }
 
 .footer-bottom__wrapper {
-  padding-left: 13%;
-  padding-right: 6%;
-
   display: flex;
   flex-direction: row;
 

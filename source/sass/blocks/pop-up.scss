@@ -1,18 +1,34 @@
-.modal {
-  display: none;
+.modal__overlay {
   position: fixed;
+
+  padding-top: 136px;
+  padding-bottom: 136px;
+  padding-left: 50%;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal {
   margin-left: -237px;
 
   width: 490px;
   height: 605px;
 
-
-  top: 136px;
-  left: 50%;
-
   background-color: #00b2ff;
 
-  z-index: 10;
+  z-index: 3;
+}
+
+.modal--hidden {
+  display: none;
 }
 
 .modal__form {
@@ -135,6 +151,8 @@
   padding-top: 5px;
   padding-left: 48px;
   width: 100%;
+
+  order: 1;
 }
 
 .modal__form label {
@@ -156,9 +174,25 @@
     border: 1px solid #ffffff;
 
     box-sizing: border-box;
-
-    @media (max-width: $mobile-width) {
-      left: 0;
-    }
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+
+.modal__form--agreement input:focus + label {
+  opacity: 0.7;
+
+  @media (max-width: $tablet-width) {
+    opacity: 1;
+  }
+}
+
+.modal__form--agreement input:checked + label::before {
+  background-image: url("../img/checed.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }

@@ -55,6 +55,29 @@ img {
 
 a {
   text-decoration: none;
+
+  opacity: 1;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $tablet-width) {
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
 }
 
 ul {
@@ -105,7 +128,8 @@ input[type="radio"].visually-hidden {
 
   cursor: pointer;
   z-index: 1;
-  transition: opsity 0.3s ease;
+  opacity: 1;
+  transition: all 0.3s ease;
 
   &:hover,
   &:focus {
@@ -116,13 +140,14 @@ input[type="radio"].visually-hidden {
     opacity: 0.5;
   }
 
-  // @media (min-width: @tablet-width) {
-  //   padding-left: 47px;
-  //   padding-right: 66px;
-  //   padding-top: 13px;
-  //   padding-bottom: 17px;
+  @media (max-width: $tablet-width) {
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
 
-  //   font-size: 16px;
-  //   line-height: 30px;
-  // }
+    &:active {
+      opacity: 1;
+    }
+  }
 }

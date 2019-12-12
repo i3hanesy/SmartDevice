@@ -43,7 +43,7 @@
     padding-bottom: 69px;
 
     &::before {
-      background-image: none;
+      content: none;
     }
 
     &::after {
@@ -61,7 +61,7 @@
     padding-left: 5%;
 
     &::after {
-      background-image: none;
+      content: none;
     }
   }
 }

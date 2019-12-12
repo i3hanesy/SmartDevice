@@ -186,10 +186,24 @@
 
   color: $white;
 
-  // background-color: #00b2ff;
   background-color: rgba(255, 255, 255, 0.1);
 
   border: none;
+
+  opacity: 1;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $tablet-width) {
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
 }
 
 .question__form input[type="tel"] {
@@ -205,7 +219,7 @@
 }
 
 .question__form textarea {
-  margin-bottom: 44px;
+  margin-bottom: 43px;
   padding-top: 12px;
   padding-left: 18px;
   padding-right: 10px;
@@ -231,7 +245,7 @@
 }
 
 .question__form button {
-  min-width: 269px;
+  min-width: 271px;
 
   @media (max-width: $tablet-width) {
     min-width: 280px;
@@ -246,8 +260,10 @@
   position: relative;
   padding-top: 5px;
   padding-left: 40px;
-  margin-right: 29px;
+  margin-right: 27px;
   width: 240px;
+
+  order: 1;
 
   @media (max-width: $tablet-width) {
     width: 249px;
@@ -261,11 +277,14 @@
   }
 }
 
-.question__form label {
+.question__form--agreement label {
   font-size: 14px;
   line-height: 16px;
 
   color: $white;
+
+  opacity: 1;
+  transition: all 0.3s ease;
 
   &::before {
     content: "";
@@ -285,12 +304,29 @@
       left: 0;
     }
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    cursor: pointer;
+
+    @media (max-width: $tablet-width) {
+      opacity: 1;
+    }
+  }
 }
 
-// .question__form--agreement input:checked + .question__form--agreement label::before {
-//   border-color: green;
-// }
+.question__form--agreement input:focus + label {
+  opacity: 0.7;
 
-// // .question__form input[type="checkbox"]:focus + .question__form label::before {
-// //   border-color: red;
-// // }
+  @media (max-width: $tablet-width) {
+    opacity: 1;
+  }
+}
+
+.question__form--agreement input:checked + label::before {
+  background-image: url("../img/checed.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
