@@ -95,7 +95,7 @@
   }
 }
 
-.about__discreption {
+.about__description {
   width: 68%;
 
   @media (max-width: $tablet-width) {
@@ -107,7 +107,7 @@
   }
 }
 
-.about__discreption h2 {
+.about__description h2 {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -133,7 +133,7 @@
   }
 }
 
-.about__discreption p {
+.about__description p {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -164,7 +164,7 @@
   }
 }
 
-.about__button--wrapper {
+.about__button-wrapper {
   padding-top: 19px;
 
   @media (max-width: $tablet-width) {
@@ -179,7 +179,7 @@
   }
 }
 
-.about__button--wrapper a {
+.about__button-wrapper a {
   padding-bottom: 11px;
   min-width: 180px;
 

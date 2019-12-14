@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>SmartDevice</title>
+    <meta name="description" content="Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней"/>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -21,20 +22,23 @@
       <div class="container">
         <div class="header__top">
           <div class="header__logo">
-            <a class="header__logo-image">
-              <div class="header__logo-image--desctop">
-                <img src="img/logo-header-desctop.png" width="202" height="52"
-                  srcset="img/logo-header-desctop.png 1x, img/logo-header-desctop@2x.png 2x"
+            <a class="header__logo-image image">
+              <div class="image__desktop">
+                <!--1x: 202px, 2x: 404px-->
+                <img src="img/logo-header-desktop.png" width="202" height="52"
+                  srcset="img/logo-header-desktop.png 1x, img/logo-header-desktop@2x.png 2x"
                   alt="Логотип">
               </div>
 
-              <div class="header__logo-image--tablet">
+              <div class="image__tablet">
+                <!--1x: 202px, 2x: 404px-->
                 <img src="img/logo-header.png" width="202" height="52"
                   srcset="img/logo-header.png 1x, img/logo-header2@x.png 2x"
                   alt="Логотип">
               </div>
 
-              <div class="header__logo-image--mobile">
+              <div class="image__mobile">
+                <!--1x: 38px, 2x: 76px-->
                 <img src="img/logo-header-mobile.png" width="38" height="38"
                   srcset="img/logo-header-mobile.png 1x, img/logo-header-mobile@2x.png 2x"
                   alt="Логотип">
@@ -42,41 +46,54 @@
             </a>
           </div>
           <div class="header__contacts">
-            <a class="header__contacts--mail" href="info@sd.ru">info@sd.ru</a>
-            <a class="header__contacts--phone" href="tel:+74950005252">+7 (495) 000 52 52</a>
+            <a class="header__contacts-mail" href="info@sd.ru">info@sd.ru</a>
+            <a class="header__contacts-phone" href="tel:+74950005252">+7 (495) 000 52 52</a>
           </div>
-          <div class="header__button--call">
+          <div class="header__button-call">
             <button class="button" type="button">Заказать звонок</button>
           </div>
         </div>
+
         <div class="header__preview preview">
           <div class="preview__description">
             <h1>Печатные платы</h1>
             <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
             <a href="#question" class="button">
-              <span class="button__desctop">Получить бесплатную консультацию</span>
+              <span class="button__desktop">Получить бесплатную консультацию</span>
               <span class="button__mobile">Бесплатная консультация</span>
             </a>
-
           </div>
-          <div class="preview__image">
 
-            <div class="preview__image--desctop">
-              <img src="img/circuit-board-desctop.png" width="705" height="515"
-                srcset="img/circuit-board-desctop.png 1x, img/circuit-board-desctop@2x.png 2x"
-                alt="Печатная плата">
+          <div class="preview__image image">
+
+            <div class="image__desktop">
+              <picture>
+                <source type="image/webp" srcset="img/circuit-board-desktop.webp, img/circuit-board-desktop@2x.webp 2x">
+                <!--1x: 705px, 2x: 1410px-->
+                <img src="img/circuit-board-desktop.png" width="705" height="515"
+                  srcset="img/circuit-board-desktop.png 1x, img/circuit-board-desktop@2x.png 2x"
+                  alt="Печатная плата">
+              </picture>
             </div>
 
-            <div class="preview__image--tablet">
-              <img src="img/circuit-board-tablet.png" width="260" height="340"
+            <div class="image__tablet">
+              <picture>
+                <source type="image/webp" srcset="img/circuit-board-tablet.webp, img/circuit-board-tablet@2x.webp 2x">
+                <!--1x: 260px, 2x: 520px-->
+                <img src="img/circuit-board-tablet.png" width="260" height="340"
                 srcset="img/circuit-board-tablet.png 1x, img/circuit-board-tablet@2x.png 2x"
                 alt="Печатная плата">
+              </picture>
             </div>
 
-            <div class="preview__image--mobile">
-              <img src="img/circuit-board-mobile.png" width="294" height="220"
+            <div class="image__mobile">
+              <picture>
+                <source type="image/webp" srcset="img/circuit-board-mobile.webp, img/circuit-board-mobile@2x.webp 2x">
+              <!--1x: 294px, 2x: 588px-->
+                <img src="img/circuit-board-mobile.png" width="294" height="220"
                 srcset="img/circuit-board-mobile.png 1x, img/circuit-board-mobile@2x.png 2x"
                 alt="Печатная плата">
+              </picture>
             </div>
 
           </div>
@@ -86,6 +103,7 @@
     </header>
 
     <main>
+      <h1 class="visually-hidden">Главная страница</h1>
       <section class="advantages" id="advantages">
         <h2 class="visually-hidden">Преимущиства</h2>
         <div class="advantages__wrapper container">
@@ -105,7 +123,7 @@
               <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
               </p>
             </li>
-            <li class="advantages__list--privacy">
+            <li>
               <svg width="36" height="35">
                 <use xlink:href="#detective-icon"></use>
               </svg>
@@ -126,18 +144,17 @@
       <section class="about">
         <div class="about__wrapper container">
           <div class="about__image">
-            <div class="about__image--desctop">
-              <img src="img/date1x.png" width="220" height="317"
-                srcset="img/date1x.png 1x, img/date2x.png 2x"
-                alt="2005">
-            </div>
+            <!--1x: 220px, 2x: 440px-->
+            <img src="img/date1x.png" width="220" height="317"
+              srcset="img/date1x.png 1x, img/date2x.png 2x"
+              alt="2005">
           </div>
-          <div class="about__discreption">
+          <div class="about__description">
             <h2>О компании</h2>
             <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
             </p>
             <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<i>..</i><span> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
-            <div class="about__button--wrapper">
+            <div class="about__button-wrapper">
               <a class="button about__button" href="#">Подробнее</a>
             </div>
           </div>
@@ -152,24 +169,36 @@
             <li>
               <a href="#">
                 <h3>Производство печатных плат</h3>
-                <div class="offers__image">
+                <div class="offers__image image">
 
-                  <div class="offers__image--desctop">
-                    <img src="img/fabrication-board-desctop.png" width="370" height="620"
-                      srcset="img/fabrication-board-desctop.png 1x, img/fabrication-board-desctop@2x.png 2x"
+                  <div class="image__desktop image__desktop--broad">
+                    <picture>
+                      <source type="image/webp" srcset="img/fabrication-board-desktop.webp, img/fabrication-board-desktop@2x.webp 2x">
+                      <!--1x: 370px, 2x: 740px-->
+                      <img src="img/fabrication-board-desktop.png" width="370" height="620"
+                      srcset="img/fabrication-board-desktop.png 1x, img/fabrication-board-desktop@2x.png 2x"
                       alt="Производство печатных плат">
+                    </picture>
                   </div>
 
-                  <div class="offers__image--tablet">
-                    <img src="img/fabrication-board-tablet.png" width="715" height="256"
+                  <div class="image__tablet image__tablet--broad">
+                    <picture>
+                      <source type="image/webp" srcset="img/fabrication-board-tablet.webp, img/fabrication-board-tablet@2x.webp 2x">
+                      <!--1x: 715px, 2x: 1430px-->
+                      <img src="img/fabrication-board-tablet.png" width="715" height="256"
                       srcset="img/fabrication-board-tablet.png 1x, img/fabrication-board-tablet@2x.png 2x"
                       alt="Производство печатных плат">
+                    </picture>
                   </div>
 
-                  <div class="offers__image--mobile">
-                    <img src="img/fabrication-board-mobile.png" width="290" height="256"
+                  <div class="image__mobile">
+                    <picture>
+                      <source type="image/webp" srcset="img/fabrication-board-mobile.webp, img/fabrication-board-mobile@2x.webp 2x">
+                      <!--1x: 290px, 2x: 580px-->
+                      <img src="img/fabrication-board-mobile.png" width="290" height="256"
                       srcset="img/fabrication-board-mobile.png 1x, img/fabrication-board-mobile@2x.png 2x"
                       alt="Производство печатных плат">
+                    </picture>
                   </div>
 
                 </div>
@@ -180,22 +209,34 @@
                 <h3>Монтаж печатных плат</h3>
                 <div class="offers__image">
 
-                  <div class="offers__image--desctop">
-                    <img src="img/installation-board-desctop.png" width="370" height="620"
-                      srcset="img/installation-board-desctop.png 1x, img/installation-board-desctop@2x.png 2x"
+                  <div class="image__desktop image__desktop--broad">
+                    <picture>
+                      <source type="image/webp" srcset="img/installation-board-desktop.webp, img/installation-board-desktop@2x.webp 2x">
+                      <!--1x: 370px, 2x: 740px-->
+                      <img src="img/installation-board-desktop.png" width="370" height="620"
+                      srcset="img/installation-board-desktop.png 1x, img/installation-board-desktop@2x.png 2x"
                       alt="Установка печатных плат">
+                    </picture>
                   </div>
 
-                  <div class="offers__image--tablet">
-                    <img src="img/installation-board-tablet.png" width="715" height="256"
+                  <div class="image__tablet image__tablet--broad">
+                    <picture>
+                      <source type="image/webp" srcset="img/installation-board-tablet.webp, img/installation-board-tablet@2x.webp 2x">
+                      <!--1x: 715px, 2x: 1430px-->
+                      <img src="img/installation-board-tablet.png" width="715" height="256"
                       srcset="img/installation-board-tablet.png 1x, img/installation-board-tablet@2x.png 2x"
                       alt="Установка печатных плат">
+                    </picture>
                   </div>
 
-                  <div class="offers__image--mobile">
-                    <img src="img/installation-board-mobile.png" width="290" height="256"
+                  <div class="image__mobile">
+                    <picture>
+                      <source type="image/webp" srcset="img/installation-board-mobile.webp, img/installation-board-mobile@2x.webp 2x">
+                      <!--1x: 290px, 2x: 580px-->
+                      <img src="img/installation-board-mobile.png" width="290" height="256"
                       srcset="img/installation-board-mobile.png 1x, img/installation-board-mobile@2x.png 2x"
                       alt="Установка печатных плат">
+                    </picture>
                   </div>
 
                 </div>
@@ -206,22 +247,34 @@
                 <h3>Комплектующие для светотехники</h3>
                 <div class="offers__image">
 
-                  <div class="offers__image--desctop">
-                    <img src="img/light-components-desctop.png" width="370" height="620"
-                      srcset="img/light-components-desctop.png 1x, img/light-components-desctop@2x.png 2x"
+                  <div class="image__desktop image__desktop--broad">
+                    <picture>
+                      <source type="image/webp" srcset="img/light-components-desktop.webp, img/light-components-desktop@2x.webp 2x">
+                      <!--1x: 370px, 2x: 740px-->
+                      <img src="img/light-components-desktop.png" width="370" height="620"
+                      srcset="img/light-components-desktop.png 1x, img/light-components-desktop@2x.png 2x"
                       alt="Светодиодная лента">
+                    </picture>
                   </div>
 
-                  <div class="offers__image--tablet">
-                    <img src="img/light-components-tablet.png" width="715" height="256"
+                  <div class="image__tablet image__tablet--broad">
+                    <picture>
+                      <source type="image/webp" srcset="img/light-components-tablet.webp, img/light-components-tablet@2x.webp 2x">
+                      <!--1x: 715px, 2x: 1430px-->
+                      <img src="img/light-components-tablet.png" width="715" height="256"
                       srcset="img/light-components-tablet.png 1x, img/light-components-tablet@2x.png 2x"
                       alt="Светодиодная лента">
+                    </picture>
                   </div>
 
-                  <div class="offers__image--mobile">
-                    <img src="img/light-components-mobile.png" width="290" height="256"
+                  <div class="image__mobile">
+                    <picture>
+                      <source type="image/webp" srcset="img/light-components-mobile.webp, img/light-components-mobile@2x.webp 2x">
+                      <!--1x: 290px, 2x: 580px-->
+                      <img src="img/light-components-mobile.png" width="290" height="256"
                       srcset="img/light-components-mobile.png 1x, img/light-components-mobile@2x.png 2x"
                       alt="Светодиодная лента">
+                    </picture>
                   </div>
 
                 </div>
@@ -231,8 +284,10 @@
         </div>
       </section>
       <section class="question" id="question">
+        <h2 class="visually-hidden">Форма для вопроса</h2>
         <div class="question__wrapper container">
           <div class="question__image">
+            <!--1x: 511px, 2x: 1022px-->
             <img src="img/paper_airplane1x.png" width="511" height="288"
             srcset="img/paper_airplane1x.png 1x, img/paper_airplane2x.png 2x"
             alt="Бумажный самолет">
@@ -241,14 +296,22 @@
             <p>Остались вопросы? Задайте их нам!</p>
             <span>Мы проконсультируем Вас бесплатно</span>
             <form method="post" enctype="multipart/form-data" autocomplete="off">
-              <input type="text" name="user-name" placeholder="Имя">
-              <input type="tel" name="user-phone" placeholder="Телефон">
-              <textarea name="user-question" placeholder="Ваш вопрос" rows="20" cols="20"></textarea>
-              <div class="question__form--agreement">
+
+              <label class="visually-hidden" for="user-name">Имя</label>
+              <input type="text" name="user-name" id="user-name" placeholder="Имя">
+
+              <label class="visually-hidden" for="user-phone">Телефон</label>
+              <input type="tel" name="user-phone" id="user-phone" placeholder="Телефон">
+
+              <label class="visually-hidden" for="user-question"></label>
+              <textarea name="user-question" id="user-question" placeholder="Ваш вопрос" rows="20" cols="20"></textarea>
+              <div class="question__form-agreement">
                 <input class="visually-hidden" type="checkbox" name="agreement" id="agreement">
                 <label for="agreement">Я согласен на обработку персональных данных</label>
               </div>
-              <button class="button" type="submit">Задать вопрос</button>
+              <div class="question__form-button">
+                <button class="button" type="submit">Задать вопрос</button>
+              </div>
             </form>
           </div>
         </div>
@@ -258,10 +321,11 @@
     <footer>
       <div class="footer__wrapper container">
         <section class="footer-top">
-          <div class="footer__social--wrapper">
+          <div class="footer__social-wrapper">
             <div class="footer-top__logo">
-              <img src="img/logo-footer-desctop.png" width="216" height="52"
-                srcset="img/logo-footer-desctop.png 1x, img/logo-footer-desctop@2x.png 2x"
+              <!--1x: 216px, 2x: 432px-->
+              <img src="img/logo-footer.png" width="216" height="52"
+                srcset="img/logo-footer.png 1x, img/logo-footer@2x.png 2x"
                 alt="Логотип">
             </div>
             <p class="copyright">1999-2018 SD Service Devices</p>
@@ -305,7 +369,9 @@
               <li><a href="#">Доставка</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
-            <button type="button">Открыть разделы</button>
+            <div class="footer-top__partitions-button">
+              <button type="button">Открыть разделы</button>
+            </div>
           </div>
           <div class="footer-top__address footer-top__no-js opened--footer-information">
             <h2>Наш офис</h2>
@@ -315,11 +381,14 @@
               <li><span>+7 (925) 003-87-67</span></li>
               <li><span>+7 (926) 926-080-79</span></li>
             </ul>
-            <button type="button">Открыть контакты</button>
+            <div class="footer-top__address-button">
+              <button type="button">Открыть контакты</button>
+            </div>
           </div>
         </section>
       </div>
       <section class="footer-bottom">
+        <h2 class="visually-hidden">Дополнительная информация</h2>
         <div class="footer-bottom__wrapper container">
           <div class="footer-bottom__rights">
             <a href="#">Все права защищены</a>
@@ -339,16 +408,22 @@
 
     <div class="modal__overlay modal--hidden">
     <section class="modal">
+      <h2 class="visually-hidden">Заказ звонка</h2>
       <div class="modal__form">
         <p>Закажите звонок</p>
         <span>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
         <form method="post" enctype="multipart/form-data" autocomplete="off">
           <button type="reset">Закрыть</button>
-          <input type="text" name="user-name" placeholder="Имя">
-          <input type="tel" name="user-phone" placeholder="Телефон">
-          <textarea name="user-question" placeholder="Ваш вопрос" rows="20" cols="20"></textarea>
-          <div class="modal__form--agreement">
-            <input class="visually-hidden" type="checkbox" id="agreement-modal">
+
+          <label class="visually-hidden" for="modal-user-name">Имя</label>
+          <input type="text" name="user-name" placeholder="Имя" id="modal-user-name">
+
+          <label class="visually-hidden" for="modal-user-phone">Телефон</label>
+          <input type="tel" name="user-phone" placeholder="Телефон" id="modal-user-phone">
+          <label class="visually-hidden" for="modal-user-question"></label>
+          <textarea name="user-question" placeholder="Ваш вопрос" rows="20" cols="20" id="modal-user-question"></textarea>
+          <div class="modal__form-agreement">
+            <input class="visually-hidden" type="checkbox" id="agreement-modal" required>
             <label for="agreement-modal">Я согласен на обработку персональных данных</label>
           </div>
           <button class="button" type="submit">Отправить</button>
@@ -357,6 +432,15 @@
 
     </section>
     </div>
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+      var elements = document.querySelectorAll('input[type="tel"]');
+      for (var i = 0; i < elements.length; i++) {
+        new IMask(elements[i], {
+          mask: '+{7}(000)000-00-00',
+        });
+      }
+    </script>
     <script src="js/zenscroll.js"></script>
     <script src="js/main.js"></script>
   </body>

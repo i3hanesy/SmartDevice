@@ -16,8 +16,15 @@ window.util = (function () {
 
   var modalOverlay = document.querySelector('.modal__overlay');
   var modal = modalOverlay.querySelector('.modal');
-  var callButoon = document.querySelector('.header__button--call button');
+  var modalForm = modal.querySelector('form');
+  var openModalButton = document.querySelector('.header__button-call button');
   var closeModalButton = modal.querySelector('button[type="reset"]');
+
+  var modalNameInput = modal.querySelector('input[type="text"]');
+  var modalTelphoneInput = modal.querySelector('input[type="tel"]');
+  var modalQuestion = modal.querySelector('textarea');
+  var modalAgreement = modal.querySelector('#agreement-modal');
+  var modalSendButton = modal.querySelector('button[type="submit"]');
 
   // var questionForm = document.querySelector('.question__form');
   // var telephoneQuestionInput = questionForm.querySelector('input[type="tel"]');
@@ -66,7 +73,7 @@ window.util = (function () {
 
   var openModal = function () {
     modalOverlay.classList.remove('modal--hidden');
-
+    modalNameInput.focus();
     document.addEventListener('keydown', onEscKeydown);
   };
 
@@ -79,11 +86,12 @@ window.util = (function () {
   var onEscKeydown = function (evt) {
     if (evt.keyCode === KEY_CODE.ESC) {
       closeModal();
+      modalForm.reset();
     }
   };
 
-  if (callButoon) {
-    callButoon.addEventListener('click', function () {
+  if (openModalButton) {
+    openModalButton.addEventListener('click', function () {
       openModal();
     });
   }
@@ -91,6 +99,7 @@ window.util = (function () {
   if (closeModalButton) {
     closeModalButton.addEventListener('click', function () {
       closeModal();
+      modalForm.reset();
     });
   }
 
@@ -100,8 +109,22 @@ window.util = (function () {
 
       if (overlay === modalOverlay) {
         closeModal();
+        modalForm.reset();
       }
 
+    });
+  }
+
+  if (modalSendButton) {
+    modalSendButton.addEventListener('click', function (evt) {
+
+      if (modalAgreement.checked) {
+        evt.preventDefault();
+        localStorage.setItem('modalUserName', modalNameInput.value);
+        localStorage.setItem('modalPhoneNumber', modalTelphoneInput.value);
+        localStorage.setItem('modalQuestion', modalQuestion.value);
+        closeModal();
+      }
     });
   }
 

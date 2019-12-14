@@ -15,7 +15,7 @@
   @media (max-width: $tablet-width) {
     padding: 0;
     padding-top: 80px;
-    padding-bottom: 55px;
+    padding-bottom: 77px;
 
     background-image: none;
   }
@@ -58,10 +58,14 @@
 .question__form {
   padding-bottom: 25px;
   padding-left: 18px;
+  width: 37%;
+  min-width: 440px;
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
     align-self: center;
+    width: auto;
+    min-width: auto;
   }
 
   @media (max-width: $mobile-width) {
@@ -78,7 +82,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  width: 573px;
+  width: 100%;
 
   @media (max-width: $tablet-width) {
     width: 595px;
@@ -94,7 +98,7 @@
 
 .question__form p {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
   padding: 0;
 
   font-family: "RobotoCondesed", "Arial", sans-serif;
@@ -105,7 +109,7 @@
   color: $white;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 19px;
+    margin-bottom: 16px;
 
     font-size: 32px;
     line-height: 140.62%;
@@ -122,9 +126,12 @@
 .question__form span {
   display: block;
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 53px;
   padding: 0;
   padding-left: 5px;
+
+  font-size: 16px;
+  line-height: 22px;
 
   color: $white;
 
@@ -158,7 +165,7 @@
   padding-left: 18px;
   padding-right: 10px;
 
-  width: 270px;
+  width: 48%;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 42px;
@@ -186,7 +193,7 @@
 
   color: $white;
 
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #19baff;
 
   border: none;
 
@@ -207,7 +214,7 @@
 }
 
 .question__form input[type="tel"] {
-  width: 269px;
+  width: 47%;
 
   @media (max-width: $tablet-width) {
     width: 279px;
@@ -224,7 +231,7 @@
   padding-left: 18px;
   padding-right: 10px;
 
-  width: 570px;
+  width: 100%;
   height: 154px;
 
   resize: none;
@@ -244,24 +251,36 @@
   }
 }
 
-.question__form button {
-  min-width: 271px;
+.question__form-button {
+  width: 48%;
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.question__form-button button {
+  width: 100%;
 
   @media (max-width: $tablet-width) {
     min-width: 280px;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     margin-bottom: 23px;
   }
 }
 
-.question__form--agreement {
+.question__form-agreement {
   position: relative;
   padding-top: 5px;
   padding-left: 40px;
-  margin-right: 27px;
-  width: 240px;
+  margin-right: 30px;
+  width: 42%;
 
   order: 1;
 
@@ -277,7 +296,7 @@
   }
 }
 
-.question__form--agreement label {
+.question__form-agreement label {
   font-size: 14px;
   line-height: 16px;
 
@@ -316,7 +335,7 @@
   }
 }
 
-.question__form--agreement input:focus + label {
+.question__form-agreement input:focus + label {
   opacity: 0.7;
 
   @media (max-width: $tablet-width) {
@@ -324,9 +343,8 @@
   }
 }
 
-.question__form--agreement input:checked + label::before {
+.question__form-agreement input:checked + label::before {
   background-image: url("../img/checed.png");
   background-repeat: no-repeat;
   background-position: center;
 }
-

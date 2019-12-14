@@ -2,9 +2,14 @@ footer {
   padding-top: 66px;
   padding-right: 6%;
   padding-left: 13%;
+
+  flex: 0 0 auto;
+
   background-color: #fafafa;
 
+
   @media (max-width: $tablet-width) {
+    padding: 0;
     padding-top: 19px;
   }
 
@@ -32,13 +37,15 @@ footer {
   }
 }
 
-.footer__social--wrapper .copyright {
+.footer__social-wrapper .copyright {
   display: none;
 
   @media (max-width: $tablet-width) {
     display: block;
     margin: 0;
     padding-top: 17px;
+
+    width: 35%;
 
     font-size: 13px;
     line-height: 24px;
@@ -54,10 +61,13 @@ footer {
   @media (max-width: $mobile-width) {
     margin-bottom: 30px;
     padding: 0;
+
+    width: 73%;
+    text-align: center;
   }
 }
 
-.footer__social--wrapper {
+.footer__social-wrapper {
   width: 25%;
   margin-right: 2.7%;
 
@@ -100,6 +110,10 @@ footer {
     margin-right: 0;
     margin-left: auto;
   }
+}
+
+.footer-top__logo img {
+  max-width: 216px;
 }
 
 .footer-top h2 {
@@ -159,12 +173,15 @@ footer {
 }
 
 .footer-top__partitions ul {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 
   max-height: 120px;
 
+  list-style: none;
   @media (max-width: $tablet-width) {
     max-height: 100%;
   }
@@ -204,12 +221,18 @@ footer {
     & h2 {
       margin-bottom: 0;
     }
+  }
+}
 
-    & ul {
-      display: none;
-      padding-top: 33px;
-      padding-left: 3px;
-    }
+.footer-top__address ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+    padding-top: 33px;
+    padding-left: 3px;
   }
 }
 
@@ -223,7 +246,7 @@ footer {
     font-size: 0;
     line-height: 0;
 
-    right: 17px;
+    right: 0px;
 
     border: none;
 
@@ -235,10 +258,11 @@ footer {
 @media (max-width: $mobile-width) {
   .closed--footer-information button {
     background-image: url("../img/closed-icon.svg");
-    width: 16px;
-    height: 16px;
-
-    top: 28px;
+    background-position: center;
+    width: 50px;
+    background-repeat: no-repeat;
+    height: 50px;
+    top: 12px;
   }
 
   .closed--footer-information ul {
@@ -247,9 +271,12 @@ footer {
 
   .opened--footer-information button {
     background-image: url("../img/opened-icon.svg");
-    width: 16px;
-    height: 1px;
-    top: 36px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    background-position: center;
+    background-size: 16px;
   }
 
   .opened--footer-information ul {

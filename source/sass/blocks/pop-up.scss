@@ -54,16 +54,30 @@
   font-size: 0;
   line-height: 0;
 
-  top: 20px;
-  right: 20px;
-
-  width: 17px;
-  height: 17px;
+  top: 3px;
+  right: 4px;
+  width: 50px;
+  height: 50px;
 
   background-color: transparent;
   border: none;
 
   background-image: url("../img/close-popup.svg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .modal__form p {
@@ -146,7 +160,7 @@
   min-width: 100%;
 }
 
-.modal__form--agreement {
+.modal__form-agreement {
   position: relative;
   padding-top: 5px;
   padding-left: 48px;
@@ -183,7 +197,7 @@
   }
 }
 
-.modal__form--agreement input:focus + label {
+.modal__form-agreement input:focus + label {
   opacity: 0.7;
 
   @media (max-width: $tablet-width) {
@@ -191,7 +205,7 @@
   }
 }
 
-.modal__form--agreement input:checked + label::before {
+.modal__form-agreement input:checked + label::before {
   background-image: url("../img/checed.png");
   background-repeat: no-repeat;
   background-position: center;

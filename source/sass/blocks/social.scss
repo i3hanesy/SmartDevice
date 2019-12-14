@@ -8,7 +8,7 @@
     padding: 0;
     padding-top: 11px;
     padding-right: 10px;
-    width: 25%;
+    width: 135px;
   }
 
   @media (max-width: $mobile-width) {
@@ -22,24 +22,30 @@
 }
 
 .social__list {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
+  list-style: none;
   @media (max-width: $tablet-width) {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
   @media (max-width: $mobile-width) {
-    justify-content: space-between;
-    width: 35%;
+    width: 111px;
   }
 }
 
 .social__list li {
   margin-right: 15px;
 
-  @media (max-width: $mobile-width) {
-    margin: 0;
+  @media (max-width: $tablet-width) {
+    margin-right: 15px;
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
   }
 }

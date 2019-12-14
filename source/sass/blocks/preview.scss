@@ -1,27 +1,31 @@
 .preview {
-  display: flex;
-  margin-bottom: -44px;
+  position: relative;
   padding-top: 133px;
+  padding-bottom: 113px;
 
   @media (max-width: $tablet-width) {
     padding-top: 0;
+    padding-bottom: 0;
     padding-left: 90px;
   }
 
   @media (max-width: $mobile-width) {
     padding: 0;
+    display: flex;
     flex-direction: column-reverse;
   }
 }
 
 .preview__description {
+  position: relative;
   padding-top: 93px;
   min-width: 51%;
-  width: 51%;
+  width: 100%;
+
+  z-index: 1;
 
   @media (max-width: $tablet-width) {
     padding-top: 112px;
-    width: 53.5%;
   }
 
   @media (max-width: $mobile-width) {
@@ -29,8 +33,6 @@
     margin-top: -29px;
     padding-left: 4.5%;
     padding-right: 5%;
-
-    width: 100%;
 
     z-index: 1;
   }
@@ -40,6 +42,8 @@
   margin: 0;
   margin-bottom: 28px;
   padding: 0;
+
+  width: 50%;
 
   font-family: "RobotoCondesed", "Arial", sans-serif;
   font-weight: 700;
@@ -58,7 +62,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 26px;
+    width: 100%;
 
     font-size: 40px;
     line-height: 47px;
@@ -72,6 +76,8 @@
   margin-bottom: 42px;
   margin-left: 99px;
   padding: 0;
+
+  width: 680px;
 
   font-size: 22px;
   line-height: 34px;
@@ -92,9 +98,11 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin-right: -54px;
     margin-bottom: 56px;
     margin-left: 50px;
+
+    width: 60%;
+
     font-size: 18px;
     line-height: 156.8%;
 
@@ -113,6 +121,7 @@
     margin-bottom: 42px;
 
     font-size: 16px;
+    width: 80%;
 
     &::before {
       top: 15px;
@@ -121,53 +130,32 @@
 }
 
 .preview__image {
-  position: relative;
+  position: absolute;
   padding-top: 36px;
   padding-left: 3px;
+
+  right: 48px;
+  top: 132px;
 
   background-image: url("../img/triangle1.png");
   background-repeat: no-repeat;
   background-position-x: -5px;
   background-position-y: -106px;
 
-  & .preview__image--desctop {
-    display: block;
-  }
-
-  & .preview__image--tablet {
-    display: none;
-  }
-
-  & .preview__image--mobile {
-    display: none;
-  }
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("img/triangle1@2x.png");
-  }
-
   @media (max-width: $tablet-width) {
     margin-right: 0;
     margin-left: auto;
     padding-top: 37px;
     padding-left: 55px;
+    padding-bottom: 10px;
+
+    right: 0;
+    top: 0;
 
     background-image: url("../img/triangle1-tablet.png");
     background-repeat: no-repeat;
     background-position-x: -15px;
     background-position-y: -76px;
-
-    & .preview__image--desctop {
-      display: none;
-    }
-
-    & .preview__image--tablet {
-      display: block;
-    }
-
-    & .preview__image--mobile {
-      display: none;
-    }
   }
 
   @media (max-width: $mobile-width) {
@@ -181,18 +169,6 @@
     padding-left: 24px;
 
     background: none;
-
-    & .preview__image--desctop {
-      display: none;
-    }
-
-    & .preview__image--tablet {
-      display: none;
-    }
-
-    & .preview__image--mobile {
-      display: block;
-    }
 
     &::before {
       content: "";
@@ -267,11 +243,10 @@
   }
 }
 
-.preview__description .button__desctop {
+.preview__description .button__desktop {
   display: block;
 
   @media (max-width: $mobile-width) {
     display: none;
   }
 }
-
