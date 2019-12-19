@@ -1,14 +1,12 @@
 .advantages {
   position: relative;
   padding-top: 112px;
-  padding-left: 13%;
-  padding-right: 6%;
 
   &::before {
     content: "";
     position: absolute;
 
-    left: 10.5%;
+    left: 10.2%;
     top: 45px;
 
     width: 300px;
@@ -18,12 +16,33 @@
     background-repeat: no-repeat;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+
+    right: 1.1%;
+    top: 420px;
+
+    width: 300px;
+    height: 300px;
+
+    background-image: url("../img/triangle-advantages.png");
+    background-repeat: no-repeat;
+
+    transform: rotate(180deg);
+
+    z-index: -1;
+  }
+
   @media (max-width: $tablet-width) {
     padding: 0;
     padding-top: 55px;
-    padding-left: 5%;
 
     &::before {
+      content: none;
+    }
+
+    &::after {
       content: none;
     }
   }
@@ -35,47 +54,37 @@
 
 .advantages__wrapper {
   position: relative;
+  padding-left: 3.6%;
+  max-width: 1560px;
 
-  &::before {
-    content: "";
-    position: absolute;
+  @media (max-width: $tablet-width) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 
-    right: -6.5%;
-    top: 310px;
-
-    width: 300px;
-    height: 300px;
-
-    background-image: url("../img/triangle-advantages.png");
-    background-repeat: no-repeat;
-
-    transform: rotate(180deg);
-
-    z-index: 0;
-
-    @media (max-width: $tablet-width) {
-      content: none;
-    }
+  @media (max-width: $mobile-width) {
+    padding-left: 14px;
+    padding-right: 16px;
   }
 }
 
 .advantages__list {
   margin: 0;
   padding: 0;
-  padding-left: 128px;
+  padding-left: 8.5%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
 
   list-style: none;
+
   @media (max-width: $tablet-width) {
     padding-left: 0;
   }
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
-    padding-left: 0.5%;
   }
 }
 
@@ -113,7 +122,7 @@
   padding-bottom: 65px;
   padding-left: 41px;
 
-  width: 40.3%;
+  width: 41.7%;
   min-height: 299px;
 
   background-color: #ffffff;
@@ -138,7 +147,7 @@
     padding-bottom: 20px;
     padding-left: 26px;
 
-    width: 44.9%;
+    width: 47.9%;
 
     min-height: 233px;
 
@@ -150,11 +159,23 @@
     margin-bottom: 20px;
 
     padding-top: 71px;
-    padding-right: 20px;
+    padding-right: 18px;
     padding-bottom: 25px;
     padding-left: 24px;
 
-    width: 91%;
+    width: 100%;
+
+    &.advantages__list-hired {
+      padding-right: 10px;
+    }
+
+    &.advantages__list-detective {
+      padding-top: 65px;
+
+      & h3 {
+        margin-bottom: -8px;
+      }
+    }
   }
 }
 

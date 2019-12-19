@@ -1,9 +1,5 @@
-.modal__overlay {
+.overlay {
   position: fixed;
-
-  padding-top: 136px;
-  padding-bottom: 136px;
-  padding-left: 50%;
 
   top: 0;
   left: 0;
@@ -17,17 +13,22 @@
 }
 
 .modal {
+  position: fixed;
   margin-left: -237px;
+  margin-top: -303px;
 
   width: 490px;
   height: 605px;
+
+  top: 50%;
+  left: 50%;
 
   background-color: #00b2ff;
 
   z-index: 3;
 }
 
-.modal--hidden {
+.overlay--hidden {
   display: none;
 }
 
@@ -141,6 +142,7 @@
   background-color: rgba(255, 255, 255, 0.1);
 
   border: none;
+  border-radius: none;
 }
 
 .modal__form textarea {

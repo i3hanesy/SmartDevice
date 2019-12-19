@@ -6,28 +6,26 @@ window.util = (function () {
     ESC: 27
   };
 
-  var footer = document.querySelector('footer');
-
-  var partitions = footer.querySelector('.footer-top__partitions');
-  var address = footer.querySelector('.footer-top__address');
+  var htmlTag = document.querySelector('html');
+  var partitions = document.querySelector('.footer-top__partitions');
+  var address = document.querySelector('.footer-top__address');
 
   var partitionsToggle = partitions.querySelector('button');
   var addressToggle = address.querySelector('button');
 
-  var modalOverlay = document.querySelector('.modal__overlay');
-  var modal = modalOverlay.querySelector('.modal');
-  var modalForm = modal.querySelector('form');
+  var modalOverlay = document.querySelector('.overlay');
   var openModalButton = document.querySelector('.header__button-call button');
-  var closeModalButton = modal.querySelector('button[type="reset"]');
 
-  var modalNameInput = modal.querySelector('input[type="text"]');
-  var modalTelphoneInput = modal.querySelector('input[type="tel"]');
-  var modalQuestion = modal.querySelector('textarea');
-  var modalAgreement = modal.querySelector('#agreement-modal');
-  var modalSendButton = modal.querySelector('button[type="submit"]');
+  if (modalOverlay) {
+    var modalForm = modalOverlay.querySelector('form');
+    var closeModalButton = modalOverlay.querySelector('button[type="reset"]');
 
-  // var questionForm = document.querySelector('.question__form');
-  // var telephoneQuestionInput = questionForm.querySelector('input[type="tel"]');
+    var modalNameInput = modalOverlay.querySelector('input[type="text"]');
+    var modalTelphoneInput = modalOverlay.querySelector('input[type="tel"]');
+    var modalQuestion = modalOverlay.querySelector('textarea');
+    var modalAgreement = modalOverlay.querySelector('#agreement-modal');
+    var modalSendButton = modalOverlay.querySelector('button[type="submit"]');
+  }
 
   partitions.classList.remove('footer-top__no-js');
   address.classList.remove('footer-top__no-js');
@@ -36,20 +34,12 @@ window.util = (function () {
   // гормошка в футере
 
   function openFooterInformation(element1, element2) {
-    if (element1.classList.contains('closed--footer-information')) {
-      element1.classList.remove('closed--footer-information');
-      element1.classList.add('opened--footer-information');
-    } else {
-      element1.classList.remove('opened--footer-information');
-      element1.classList.add('closed--footer-information');
-    }
-
-    if (element2.classList.contains('opened--footer-information')) {
-      element2.classList.remove('opened--footer-information');
-      element2.classList.add('closed--footer-information');
-    } else {
-      element2.classList.remove('closed--footer-information');
-      element2.classList.add('opened--footer-information');
+    if (element1.classList.contains('footer-top__information-closed') && element2.classList.contains('footer-top__information-closed')) {
+      element1.classList.remove('footer-top__information-closed');
+      element1.classList.add('footer-top__information-opened');
+    } else if (element1.classList.contains('footer-top__information-opened')) {
+      element1.classList.remove('footer-top__information-opened');
+      element1.classList.add('footer-top__information-closed');
     }
   }
 
@@ -64,7 +54,7 @@ window.util = (function () {
   if (addressToggle) {
     addressToggle.addEventListener('click', function (evt) {
       evt.preventDefault();
-      openFooterInformation(partitions, address);
+      openFooterInformation(address, partitions);
 
     });
   }
@@ -72,13 +62,15 @@ window.util = (function () {
   // форма заказа звонка
 
   var openModal = function () {
-    modalOverlay.classList.remove('modal--hidden');
+    htmlTag.style.overflow = 'hidden';
+    modalOverlay.classList.remove('overlay--hidden');
     modalNameInput.focus();
     document.addEventListener('keydown', onEscKeydown);
   };
 
   var closeModal = function () {
-    modalOverlay.classList.add('modal--hidden');
+    htmlTag.style.overflow = 'visible';
+    modalOverlay.classList.add('overlay--hidden');
 
     document.removeEventListener('keydown', onEscKeydown);
   };

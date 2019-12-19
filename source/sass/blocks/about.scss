@@ -1,9 +1,7 @@
 .about {
   position: relative;
   padding-top: 76px;
-  padding-right: 6%;
   padding-bottom: 92px;
-  padding-left: 13%;
 
   &::before {
     content: "";
@@ -12,11 +10,13 @@
     width: 636px;
     height: 717px;
 
-    left: 0;
+    left: -0.4%;
     top: -327px;
 
     background-image: url("../img/triangle-advantages-polygon.png");
     background-repeat: no-repeat;
+
+    z-index: -1;
   }
 
   &::after {
@@ -26,7 +26,7 @@
     width: 636px;
     height: 717px;
 
-    left: 26%;
+    left: 25.7%;
     top: -469px;
 
     background-image: url("../img/triangle-advantages-polygon.png");
@@ -50,38 +50,55 @@
       width: 636px;
       height: 717px;
 
-      left: 20%;
+      left: auto;
+      right: 0;
       top: -410px;
+
+      background-image: url("../img/triangle-advantages-polygon.png");
+      background-repeat: no-repeat;
     }
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 36px;
+    padding-top: 38px;
     padding-bottom: 65px;
-    padding-left: 5%;
 
     &::after {
-      content: none;
+      width: 318px;
+      height: 661px;
+
+      right: 0;
+      top: -540px;
+      background-image: url("../img/triangle-advantages-polygon-mobile.png");
+      background-repeat: no-repeat;
     }
   }
 }
 
 .about__wrapper {
-  padding-left: 97px;
   display: flex;
+  padding-left: 3.6%;
+
+  max-width: 1560px;
   flex-direction: row;
 
   @media (max-width: $tablet-width) {
     padding: 0;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .about__image {
-  padding-top: 5px;
   margin-right: -10px;
+  padding-top: 5px;
+  padding-left: 6.5%;
 
   @media (max-width: $tablet-width) {
-    padding-top: 0;
+    padding: 0;
     margin-right: -33px;
     margin-left: -8px;
 
@@ -96,7 +113,7 @@
 }
 
 .about__description {
-  width: 68%;
+  width: 66%;
 
   @media (max-width: $tablet-width) {
     width: 70%;
@@ -159,7 +176,6 @@
 
   @media (max-width: $mobile-width) {
     margin-bottom: 40px;
-    padding-right: 23px;
     padding-left: 0;
   }
 }

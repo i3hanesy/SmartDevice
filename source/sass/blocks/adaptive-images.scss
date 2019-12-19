@@ -22,21 +22,21 @@
   }
 }
 
-@media (max-width: 1160px) {
-  .image__desktop--broad {
-    display: none;
-  }
+// @media (max-width: 1160px) {
+//   .image__desktop--broad {
+//     display: none;
+//   }
 
-  .image__tablet--broad {
-    display: block;
-  }
-}
+//   .image__tablet--broad {
+//     display: block;
+//   }
+// }
 
-@media (max-width: $mobile-width) {
-  .image__tablet--broad {
-    display: none;
-  }
-}
+// @media (max-width: $mobile-width) {
+//   .image__tablet--broad {
+//     display: none;
+//   }
+// }
 
 .image__mobile {
   display: none;

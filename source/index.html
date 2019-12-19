@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- pixel glass -->
     <link rel="preload" href="fonts/Robotocondensed.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Robotocondensedbold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Roboto.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/ptmono.woff2" as="font" crossorigin="anonymous">
-    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -19,7 +20,7 @@
       <include src="build/img/sprite_auto.svg"></include>
     </div>
     <header class="header">
-      <div class="container">
+      <div class="header__wrapper container">
         <div class="header__top">
           <div class="header__logo">
             <a class="header__logo-image image">
@@ -115,15 +116,15 @@
               <h3>Оперативные сроки</h3>
               <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
             </li>
-            <li>
+            <li class="advantages__list-hired">
               <svg width="35" height="35">
                 <use xlink:href="#hired-icon"></use>
               </svg>
               <h3>Крупные поставщики</h3>
-              <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
+              <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
               </p>
             </li>
-            <li>
+            <li class="advantages__list-detective">
               <svg width="36" height="35">
                 <use xlink:href="#detective-icon"></use>
               </svg>
@@ -166,118 +167,19 @@
           <h2 class="visually-hidden">Наши товары и услуги</h2>
           <p>Service Device предлагает следующие товары и услуги</p>
           <ul class="offers__list">
-            <li>
+            <li class="offers__list-fabrication">
               <a href="#">
                 <h3>Производство печатных плат</h3>
-                <div class="offers__image image">
-
-                  <div class="image__desktop image__desktop--broad">
-                    <picture>
-                      <source type="image/webp" srcset="img/fabrication-board-desktop.webp, img/fabrication-board-desktop@2x.webp 2x">
-                      <!--1x: 370px, 2x: 740px-->
-                      <img src="img/fabrication-board-desktop.png" width="370" height="620"
-                      srcset="img/fabrication-board-desktop.png 1x, img/fabrication-board-desktop@2x.png 2x"
-                      alt="Производство печатных плат">
-                    </picture>
-                  </div>
-
-                  <div class="image__tablet image__tablet--broad">
-                    <picture>
-                      <source type="image/webp" srcset="img/fabrication-board-tablet.webp, img/fabrication-board-tablet@2x.webp 2x">
-                      <!--1x: 715px, 2x: 1430px-->
-                      <img src="img/fabrication-board-tablet.png" width="715" height="256"
-                      srcset="img/fabrication-board-tablet.png 1x, img/fabrication-board-tablet@2x.png 2x"
-                      alt="Производство печатных плат">
-                    </picture>
-                  </div>
-
-                  <div class="image__mobile">
-                    <picture>
-                      <source type="image/webp" srcset="img/fabrication-board-mobile.webp, img/fabrication-board-mobile@2x.webp 2x">
-                      <!--1x: 290px, 2x: 580px-->
-                      <img src="img/fabrication-board-mobile.png" width="290" height="256"
-                      srcset="img/fabrication-board-mobile.png 1x, img/fabrication-board-mobile@2x.png 2x"
-                      alt="Производство печатных плат">
-                    </picture>
-                  </div>
-
-                </div>
               </a>
             </li>
-            <li>
+            <li class="offers__list-installation">
               <a href="#">
                 <h3>Монтаж печатных плат</h3>
-                <div class="offers__image">
-
-                  <div class="image__desktop image__desktop--broad">
-                    <picture>
-                      <source type="image/webp" srcset="img/installation-board-desktop.webp, img/installation-board-desktop@2x.webp 2x">
-                      <!--1x: 370px, 2x: 740px-->
-                      <img src="img/installation-board-desktop.png" width="370" height="620"
-                      srcset="img/installation-board-desktop.png 1x, img/installation-board-desktop@2x.png 2x"
-                      alt="Установка печатных плат">
-                    </picture>
-                  </div>
-
-                  <div class="image__tablet image__tablet--broad">
-                    <picture>
-                      <source type="image/webp" srcset="img/installation-board-tablet.webp, img/installation-board-tablet@2x.webp 2x">
-                      <!--1x: 715px, 2x: 1430px-->
-                      <img src="img/installation-board-tablet.png" width="715" height="256"
-                      srcset="img/installation-board-tablet.png 1x, img/installation-board-tablet@2x.png 2x"
-                      alt="Установка печатных плат">
-                    </picture>
-                  </div>
-
-                  <div class="image__mobile">
-                    <picture>
-                      <source type="image/webp" srcset="img/installation-board-mobile.webp, img/installation-board-mobile@2x.webp 2x">
-                      <!--1x: 290px, 2x: 580px-->
-                      <img src="img/installation-board-mobile.png" width="290" height="256"
-                      srcset="img/installation-board-mobile.png 1x, img/installation-board-mobile@2x.png 2x"
-                      alt="Установка печатных плат">
-                    </picture>
-                  </div>
-
-                </div>
               </a>
             </li>
-            <li>
+            <li class="offers__list-light">
               <a href="#">
                 <h3>Комплектующие для светотехники</h3>
-                <div class="offers__image">
-
-                  <div class="image__desktop image__desktop--broad">
-                    <picture>
-                      <source type="image/webp" srcset="img/light-components-desktop.webp, img/light-components-desktop@2x.webp 2x">
-                      <!--1x: 370px, 2x: 740px-->
-                      <img src="img/light-components-desktop.png" width="370" height="620"
-                      srcset="img/light-components-desktop.png 1x, img/light-components-desktop@2x.png 2x"
-                      alt="Светодиодная лента">
-                    </picture>
-                  </div>
-
-                  <div class="image__tablet image__tablet--broad">
-                    <picture>
-                      <source type="image/webp" srcset="img/light-components-tablet.webp, img/light-components-tablet@2x.webp 2x">
-                      <!--1x: 715px, 2x: 1430px-->
-                      <img src="img/light-components-tablet.png" width="715" height="256"
-                      srcset="img/light-components-tablet.png 1x, img/light-components-tablet@2x.png 2x"
-                      alt="Светодиодная лента">
-                    </picture>
-                  </div>
-
-                  <div class="image__mobile">
-                    <picture>
-                      <source type="image/webp" srcset="img/light-components-mobile.webp, img/light-components-mobile@2x.webp 2x">
-                      <!--1x: 290px, 2x: 580px-->
-                      <img src="img/light-components-mobile.png" width="290" height="256"
-                      srcset="img/light-components-mobile.png 1x, img/light-components-mobile@2x.png 2x"
-                      alt="Светодиодная лента">
-                    </picture>
-                  </div>
-
-                </div>
               </a>
             </li>
           </ul>
@@ -298,15 +200,15 @@
             <form method="post" enctype="multipart/form-data" autocomplete="off">
 
               <label class="visually-hidden" for="user-name">Имя</label>
-              <input type="text" name="user-name" id="user-name" placeholder="Имя">
+              <input type="text" name="user-name" id="user-name" placeholder="Имя" required>
 
               <label class="visually-hidden" for="user-phone">Телефон</label>
-              <input type="tel" name="user-phone" id="user-phone" placeholder="Телефон">
+              <input type="tel" name="user-phone" id="user-phone" placeholder="Телефон" required>
 
               <label class="visually-hidden" for="user-question"></label>
-              <textarea name="user-question" id="user-question" placeholder="Ваш вопрос" rows="20" cols="20"></textarea>
+              <textarea name="user-question" id="user-question" placeholder="Ваш вопрос" rows="20" cols="20" required></textarea>
               <div class="question__form-agreement">
-                <input class="visually-hidden" type="checkbox" name="agreement" id="agreement">
+                <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required>
                 <label for="agreement">Я согласен на обработку персональных данных</label>
               </div>
               <div class="question__form-button">
@@ -318,7 +220,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="footer__wrapper container">
         <section class="footer-top">
           <div class="footer__social-wrapper">
@@ -326,6 +228,7 @@
               <!--1x: 216px, 2x: 432px-->
               <img src="img/logo-footer.png" width="216" height="52"
                 srcset="img/logo-footer.png 1x, img/logo-footer@2x.png 2x"
+
                 alt="Логотип">
             </div>
             <p class="copyright">1999-2018 SD Service Devices</p>
@@ -358,28 +261,32 @@
               </ul>
             </div>
           </div>
-          <div class="footer-top__partitions footer-top__no-js closed--footer-information">
+          <div class="footer-top__partitions footer-top__no-js footer-top__information-closed">
             <h2>Разделы сайта</h2>
-            <ul>
-              <li><a href="#">О компании</a></li>
-              <li><a href="#">Продукты</a></li>
-              <li><a href="#">Производство печатных плат</a></li>
-              <li><a href="#">Монтаж печатных плат</a></li>
-              <li><a href="#">Комплектующие</a></li>
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
+            <div class="footer-top__partitions-wrapper">
+              <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Продукты</a></li>
+                <li><a href="#">Производство печатных плат</a></li>
+                <li><a href="#">Монтаж печатных плат</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Комплектующие</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
             <div class="footer-top__partitions-button">
               <button type="button">Открыть разделы</button>
             </div>
           </div>
-          <div class="footer-top__address footer-top__no-js opened--footer-information">
+          <div class="footer-top__address footer-top__no-js footer-top__information-opened">
             <h2>Наш офис</h2>
-            <ul class="address__list">
-              <li><span>г. Мытищи, Олимпийский проспект, д.10</span></li>
-              <li><span>+7 (495) 589-40-50</span></li>
-              <li><span>+7 (925) 003-87-67</span></li>
-              <li><span>+7 (926) 926-080-79</span></li>
+            <ul>
+              <li><a href="#">г. Мытищи, Олимпийский проспект, д.10</a></li>
+              <li><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
+              <li><a href="tel:+79250038767">+7 (925) 003-87-67</a></li>
+              <li><a href="tel:+792692608079">+7 (926) 926-080-79</a></li>
             </ul>
             <div class="footer-top__address-button">
               <button type="button">Открыть контакты</button>
@@ -391,46 +298,46 @@
         <h2 class="visually-hidden">Дополнительная информация</h2>
         <div class="footer-bottom__wrapper container">
           <div class="footer-bottom__rights">
-            <a href="#">Все права защищены</a>
+            <p>Все права защищены</p>
           </div>
           <div class="footer-bottom__copyright">
             <p>1999-2018 SD Service Devices</p>
           </div>
           <div class="footer-bottom__privacy">
-            <a href="#">Условия конфиденциальности</a>
+            <p><a href="#">Условия конфиденциальности</a></p>
           </div>
           <div class="footer-bottom__studio">
-            <a href="#">Developed by wow studio</a>
+            <p>Developed by<a href="#"> wow studio</a></p>
           </div>
         </div>
       </section>
     </footer>
 
-    <div class="modal__overlay modal--hidden">
-    <section class="modal">
-      <h2 class="visually-hidden">Заказ звонка</h2>
-      <div class="modal__form">
-        <p>Закажите звонок</p>
-        <span>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
-        <form method="post" enctype="multipart/form-data" autocomplete="off">
-          <button type="reset">Закрыть</button>
+    <div class="overlay overlay--hidden">
+      <section class="overlay__modal modal">
+        <h2 class="visually-hidden">Заказ звонка</h2>
+        <div class="modal__form">
+          <p>Закажите звонок</p>
+          <span>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
+          <form method="post" enctype="multipart/form-data" autocomplete="off">
+            <button type="reset">Закрыть</button>
 
-          <label class="visually-hidden" for="modal-user-name">Имя</label>
-          <input type="text" name="user-name" placeholder="Имя" id="modal-user-name">
+            <label class="visually-hidden" for="modal-user-name">Имя</label>
+            <input type="text" name="user-name" placeholder="Имя" id="modal-user-name" required>
 
-          <label class="visually-hidden" for="modal-user-phone">Телефон</label>
-          <input type="tel" name="user-phone" placeholder="Телефон" id="modal-user-phone">
-          <label class="visually-hidden" for="modal-user-question"></label>
-          <textarea name="user-question" placeholder="Ваш вопрос" rows="20" cols="20" id="modal-user-question"></textarea>
-          <div class="modal__form-agreement">
-            <input class="visually-hidden" type="checkbox" id="agreement-modal" required>
-            <label for="agreement-modal">Я согласен на обработку персональных данных</label>
-          </div>
-          <button class="button" type="submit">Отправить</button>
-        </form>
-      </div>
+            <label class="visually-hidden" for="modal-user-phone">Телефон</label>
+            <input type="tel" name="user-phone" placeholder="Телефон" id="modal-user-phone" required>
+            <label class="visually-hidden" for="modal-user-question"></label>
+            <textarea name="user-question" placeholder="Ваш вопрос" rows="20" cols="20" id="modal-user-question" required></textarea>
+            <div class="modal__form-agreement">
+              <input class="visually-hidden" type="checkbox" id="agreement-modal" required>
+              <label for="agreement-modal">Я согласен на обработку персональных данных</label>
+            </div>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+        </div>
 
-    </section>
+      </section>
     </div>
     <script src="https://unpkg.com/imask"></script>
     <script>
@@ -441,7 +348,7 @@
         });
       }
     </script>
-    <script src="js/zenscroll.js"></script>
+    <script src="js/zenscroll-min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

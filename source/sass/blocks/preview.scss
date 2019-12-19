@@ -134,7 +134,7 @@
   padding-top: 36px;
   padding-left: 3px;
 
-  right: 48px;
+  right: 0;
   top: 132px;
 
   background-image: url("../img/triangle1.png");
@@ -204,7 +204,7 @@
 }
 
 .preview__description a {
-  margin-left: 100px;
+  margin-left: 98px;
   padding-top: 18px;
   padding-bottom: 18px;
 
@@ -223,7 +223,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-left: 0;
+    margin-left: 4px;
     width: 288px;
   }
 }
@@ -238,7 +238,7 @@
 
   @media (max-width: $mobile-width) {
     display: block;
-    margin-left: 3px;
+    margin-left: 0;
     width: 100%;
   }
 }

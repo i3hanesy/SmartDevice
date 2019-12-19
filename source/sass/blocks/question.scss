@@ -2,41 +2,42 @@
   position: relative;
   padding-top: 92px;
   padding-bottom: 86px;
-  padding-left: 10%;
-  padding-right: 6%;
 
   background-color: #00b2ff;
   background-image: url("../img/triangle-form.png");
   background-repeat: no-repeat;
 
-  background-position-x: 101%;
+  background-position-x: 100.5%;
   background-position-y: 35px;
 
   @media (max-width: $tablet-width) {
     padding: 0;
-    padding-top: 80px;
-    padding-bottom: 77px;
+    padding-top: 82px;
+    padding-bottom: 78px;
 
     background-image: none;
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 27px;
+    padding-top: 29px;
     padding-bottom: 16px;
   }
 }
 
 .question__wrapper {
+  padding-left: 10px;
+  max-width: 1560px;
   display: flex;
   flex-direction: row;
 
   @media (max-width: $tablet-width) {
+    padding: 0;
     flex-direction: column;
   }
 }
 
 .question__image {
-  margin-right: 5.6%;
+  margin-right: 6.2%;
   padding-top: 71px;
   padding-left: 10%;
 
@@ -56,12 +57,14 @@
 }
 
 .question__form {
+  margin-right: 30px;
   padding-bottom: 25px;
   padding-left: 18px;
-  width: 37%;
+  width: 38.2%;
   min-width: 440px;
 
   @media (max-width: $tablet-width) {
+    margin-right: 0;
     padding-left: 0;
     align-self: center;
     width: auto;
@@ -165,7 +168,7 @@
   padding-left: 18px;
   padding-right: 10px;
 
-  width: 48%;
+  width: 47.5%;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 42px;
@@ -196,6 +199,7 @@
   background-color: #19baff;
 
   border: none;
+  border-radius: 0;
 
   opacity: 1;
   transition: all 0.3s ease;
@@ -214,7 +218,7 @@
 }
 
 .question__form input[type="tel"] {
-  width: 47%;
+  width: 47.5%;
 
   @media (max-width: $tablet-width) {
     width: 279px;
@@ -252,7 +256,7 @@
 }
 
 .question__form-button {
-  width: 48%;
+  width: 47.5%;
 
   @media (max-width: $tablet-width) {
     width: auto;
@@ -285,7 +289,7 @@
   order: 1;
 
   @media (max-width: $tablet-width) {
-    width: 249px;
+    width: 248px;
   }
 
   @media (max-width: $mobile-width) {
