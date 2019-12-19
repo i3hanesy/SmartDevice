@@ -34,12 +34,25 @@ window.util = (function () {
   // гормошка в футере
 
   function openFooterInformation(element1, element2) {
-    if (element1.classList.contains('footer-top__information-closed') && element2.classList.contains('footer-top__information-closed')) {
-      element1.classList.remove('footer-top__information-closed');
-      element1.classList.add('footer-top__information-opened');
+    var firstElementClosed = element1.classList.contains('footer-top__information-closed');
+
+    var openElement = function (element) {
+      element.classList.remove('footer-top__information-closed');
+      element.classList.add('footer-top__information-opened');
+    };
+
+    var closeElement = function (element) {
+      element.classList.remove('footer-top__information-opened');
+      element.classList.add('footer-top__information-closed');
+    };
+
+    if (firstElementClosed && element2.classList.contains('footer-top__information-closed')) {
+      openElement(element1);
+    } else if (firstElementClosed && element2.classList.contains('footer-top__information-opened')) {
+      closeElement(element2);
+      openElement(element1);
     } else if (element1.classList.contains('footer-top__information-opened')) {
-      element1.classList.remove('footer-top__information-opened');
-      element1.classList.add('footer-top__information-closed');
+      closeElement(element1);
     }
   }
 
