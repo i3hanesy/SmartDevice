@@ -10,8 +10,13 @@ window.util = (function () {
   var partitions = document.querySelector('.footer-top__partitions');
   var address = document.querySelector('.footer-top__address');
 
-  var partitionsToggle = partitions.querySelector('button');
-  var addressToggle = address.querySelector('button');
+  if (partitions) {
+    var partitionsToggle = partitions.querySelector('button');
+  }
+
+  if (address) {
+    var addressToggle = address.querySelector('button');
+  }
 
   var modalOverlay = document.querySelector('.overlay');
   var openModalButton = document.querySelector('.header__button-call button');
@@ -27,8 +32,14 @@ window.util = (function () {
     var modalSendButton = modalOverlay.querySelector('button[type="submit"]');
   }
 
-  partitions.classList.remove('footer-top__no-js');
-  address.classList.remove('footer-top__no-js');
+
+  if (partitions) {
+    partitions.classList.remove('footer-top__no-js');
+  }
+
+  if (address) {
+    address.classList.remove('footer-top__no-js');
+  }
 
 
   // гормошка в футере
